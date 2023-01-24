@@ -1,0 +1,12 @@
+# Copyright (c) 2022 Space Cubics, LLC.
+# SPDX-License-Identifier: Apache-2.0
+
+config LIBMSGPACKC
+    bool "Enable msgpack-c"
+    help
+      This option enables the msgpack-c as a Zephyr module.
+
+config APP_LINK_WITH_MSGPACKC
+    bool "Make msgpack-c header file available to application"
+    default y
+    depends on LIBMSGPACKC
